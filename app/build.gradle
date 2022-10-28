@@ -1,0 +1,51 @@
+//Module-level build file
+
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+}
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '25.0.2'
+
+    defaultConfig {
+        applicationId "com.mindorks.cameralibrary"
+        minSdkVersion 16
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+repositories {
+    google()
+    mavenCentral()
+
+    //maven {
+    //    url "https://plugins.gradle.org/m2/"
+    //}
+}
+
+        dependencies {
+            implementation fileTree(dir: 'libs', include: ['*.jar'])
+            testImplementation 'junit:junit:4.12'
+            implementation 'com.android.support:appcompat-v7:25.1.0'
+
+        }
+            implementation project(':paracamera')
+
+
+
+
+
+
+
+
